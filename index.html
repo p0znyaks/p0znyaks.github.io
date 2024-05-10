@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="initial-scale=1, width=device-width"/>
+        <title>Театр юного зрителя</title>
+        <link rel="stylesheet" href="./global.css"/>
+        <link rel="stylesheet" href="./index.css"/>
+        <link rel="stylesheet" href="./burger.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap" rel="stylesheet">
+        <link
+                rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+        />
+        <script type="text/javascript" src="index.js"></script>
+        <script type="text/javascript" src="getURL.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="header__menu-bar">
+                <div class="header__menu-bar-logo">
+                    <a href="index.html" target="_self"><img alt="" src="./public/logo.svg"/></a>
+                </div>
+                <div class="header__burger-menu">
+                    <label for="burger-toggle" class="burger-icon">&#9776;</label>
+                    <input type="checkbox" id="burger-toggle">
+                    <ul class="burger-menu">
+                        <li><a class="burger-a" href="index.html" target="_self">Главная</a></li>
+                        <li><a class="burger-a" href="index.html#collection">Афиша</a></li>
+                        <li><a class="burger-a" href="news.html" target="_self">Новости</a></li>
+                        <li><a class="burger-a" href="brief.html" target="_self">О театре</a></li>
+                    </ul>
+                </div>
+                <div class="header__menu-bar-menu">
+                    <div class="header__menu-bar-menu-item"><a href="index.html" target="_self">Главная</a></div>
+                    <div class="header__menu-bar-menu-item"><a href="#collection">Афиша</a></div>
+                    <div class="header__menu-bar-menu-item"><a href="news.html" target="_self">Новости</a></div>
+                    <div class="header__menu-bar-menu-item"><a href="brief.html" target="_self">О театре</a></div>
+                </div>
+            </div>
+            <div class="header__image-container">
+<!--                <img class="header__image" alt="" src="./public/inno-1@2x.png"/>-->
+                <span class="header__title">
+                    Минский театр<br/>
+                    юного зрителя
+                </span>
+<!--                <div class="header__buttons">-->
+<!--                    <button><img src="public/group-3.svg" alt=""></button>-->
+<!--                    <button><img src="public/group-4.svg" alt=""></button>-->
+<!--                </div>-->
+            </div>
+        </div>
+
+        <div class="information">
+            <div class="information__short-information">
+            <div class="information__date">
+                <span class="information-date">Дата основания</span><br>
+                <span class="">1932 год</span>
+            </div>
+            <div class="information__event">
+                <span class="information-event">2020-2021 год</span><br>
+                <span>34 спектакля</span>
+            </div>
+            <div class="information__age">
+                <span class="information-age">Абсолютно для всех</span><br>
+                <span>0+</span>
+            </div>
+            </div>
+            <div class="information__more-information">
+                <a href="brief.html"><span>Узнать подробнее</span></a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content__nearest-premiers-block">
+                <div class="content__nearest_premiers-title" id="collection">Ближайшие премьеры</div>
+                    <div class="content__nearest_premiers-list">
+                        <div class="content__nearest_premiers-list-item">
+                            <img class="content__nearest_premiers-list-item-image"
+                                 src="./public/childhood.jpg"
+                                 alt="" onclick="showEvent(1)">
+                            <div class="content__nearest_premiers-list-item-text">
+                                <div class="content__nearest_premiers-list-item-text-date">
+                                    <span>20 мая, 18:30</span>
+                                </div>
+                                <div class="content__nearest_premiers-list-item-text-age">
+                                    <span>14+</span>
+                                </div>
+                            </div>
+                            <div class="content__nearest_premiers-list-item-text">
+                                <div class="content__nearest_premiers-list-item-name">
+                                    Иваново детство
+                                </div>
+                                <div class="content__nearest_premiers-list-item-description">
+                                    Иван — это ребёнок, снедаемый страстью взрослого.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__nearest_premiers-list-item">
+                            <img class="content__nearest_premiers-list-item-image"
+                                 src="./public/frame-197@3x.png"
+                                 alt="" onclick="showEvent(2)">
+                            <div class="content__nearest_premiers-list-item-text">
+                                <div class="content__nearest_premiers-list-item-text-date">
+                                    <span>20 мая, 18:30</span>
+                                </div>
+                                <div class="content__nearest_premiers-list-item-text-age">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                            <div class="content__nearest_premiers-list-item-text">
+                                <div class="content__nearest_premiers-list-item-name">
+                                    Лиса и виноград
+                                </div>
+                                <div class="content__nearest_premiers-list-item-description">
+                                    Богач и философ Ксанф вернулся из путешествия с группой купленных им рабов, один из которых - Эзоп - настолько безобразен и уродлив.
+                                </div>
+                            </div>
+                        </div>
+                            <div class="content__nearest_premiers-list-item">
+                            <img class="content__nearest_premiers-list-item-image"
+                                 src="./public/childhood.jpg"
+                                 alt="" onclick="showEvent(1)">
+                            <div class="content__nearest_premiers-list-item-text">
+                                <div class="content__nearest_premiers-list-item-text-date">
+                                    <span>20 мая, 18:30</span>
+                                </div>
+                                <div class="content__nearest_premiers-list-item-text-age">
+                                    <span>14+</span>
+                                </div>
+                            </div>
+                            <div class="content__nearest_premiers-list-item-text">
+                                <div class="content__nearest_premiers-list-item-name">
+                                    Иваново детство
+                                </div>
+                                <div class="content__nearest_premiers-list-item-description">
+                                    Иван — это ребёнок, снедаемый страстью взрослого.
+                                </div>
+                            </div>
+                            </div>
+                        <div class="content__nearest_premiers-list-item">
+                            <img class="content__nearest_premiers-list-item-image"
+                                 src="./public/frame-197@3x.png"
+                                 alt="" onclick="showEvent(2)">
+                            <div class="content__nearest_premiers-list-item-text">
+                                <div class="content__nearest_premiers-list-item-text-date">
+                                    <span>20 мая, 18:30</span>
+                                </div>
+                                <div class="content__nearest_premiers-list-item-text-age">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                            <div class="content__nearest_premiers-list-item-text">
+                                <div class="content__nearest_premiers-list-item-name">
+                                    Лиса и виноград
+                                </div>
+                                <div class="content__nearest_premiers-list-item-description">
+                                    Богач и философ Ксанф вернулся из путешествия с группой купленных им рабов, один из которых - Эзоп - настолько безобразен и уродлив.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer__info">
+                <div class="container">
+                    <div class="footer__info-container-panorama_history"><a class="footer__a" href="booking.html">Панорама зала</a></div>
+                </div>
+                <div class="container">
+                    <div class="footer__info-wrapper-rules_collective"><a class="footer__a" href="brief.html">История театра</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="news">
+            <div class="news__theater">Новости театра</div>
+            <div class="news__more">
+                <div class="news__more-show-all"><a href="news.html">Показать все</a></div>
+                <div class="news__more-show-all-arrow">
+                    <a href="news.html"><img class="frame-child" alt="" src="./public/arrow-1.svg"/></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="news__block">
+            <div class="news__block-row">
+                <div class="news__block-line-top-left">
+                    <img class="child2" alt="" src="./public/rectangle-153@2x.png"/>
+                    <div class="news__block-title">
+                        <p class="p">24 мая - благотворительный показ спектакля<br>«Иваново детство» </p>
+                        <div class="news__block-date">12.05.21</div>
+                    </div>
+                    <div class="news__block-description">
+                        24 мая пройдет благотворительный показ спектакля “Иваново детство”.
+                    </div>
+                </div>
+                <div class="news__block-line-top-right">
+                    <img class="child4" alt="" src="./public/rectangle-154@2x.png"/>
+                    <div class="news__block-title">
+                        <p class="p">"Маленький принц" с сурдопереводом и<br>тифлокомментированием </p>
+                        <div class="news__block-date">12.05.21</div>
+                    </div>
+                    <div class="news__block-description">
+                        29 мая в 18:00 пройдет очередной показ в рамках проекта "Театр без
+                        границ" Минского ТЮЗа и фонда "День добрых дел". Тифлокомментированием и
+                        сурдопереводом будет оснащен "Маленький принц" - трогательная и мудрая
+                        история о дружбе и взрослении.
+                    </div>
+                </div>
+            </div>
+            <div class="news__block-row">
+                <div class="news__block-line-bottom-left">
+                    <img class="child3" alt="" src="./public/rectangle-155@2x.png"/>
+                    <div class="news__block-title">
+                        Вячеслав Казанцев - народный артист РТ!
+                        <div class="news__block-date">27.04.21</div>
+                    </div>
+                    <div class="news__block-description">Президент РТ Рустам Минниханов присвоил ему звание в Казанском Кремле.<br>Сегодня Президент Республики Татарстан Рустам Минниханов вручил
+                        государственные награды Российской Федерации и Республики Татарстан.</div>
+                </div>
+                <div class="news__block-line-bottom-right">
+                    <img class="child5" alt="" src="./public/rectangle-156@2x.png"/>
+                    <div class="news__block-title">
+                        <p class="p">Радион Букаев представит свой первый спектакль<br>в Минском ТЮЗе </p>
+                        <div class="news__block-date">12.05.21</div>
+                    </div>
+                    <div class="news__block-description"> Им станет постановка о 1970-1980 годах театра, приуроченная к 90-летнему юбилею ТЮЗа
+                        <br>26 марта в 18:30 в Минском ТЮЗе пройдет премьера спектакля-пасьянса
+                        "Первый тайм". Его постановщиком выступил Радион Букаев, который с
+                        2020 года является главным режиссером театра.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
