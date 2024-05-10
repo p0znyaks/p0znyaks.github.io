@@ -1,0 +1,106 @@
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+  }
+}
+
+.event__information {
+  margin-top: 50px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-between;
+
+  &-title {
+
+    &-upper {
+      font-size: var(--font-size-17xl);
+      color: var(--color-gray-300);
+      font-family: 'Roboto', sans-serif;
+    }
+
+    &-bottom {
+      font-size: var(--font-size-lg);
+      color: var(--color-gray-300);
+      font-family: 'Crimson Pro', sans-serif;
+    }
+  }
+
+  &-misc {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+
+    &-time {
+
+      &-upper {
+        font-size: var(--font-size-xs);
+        color: var(--color-gray-200);
+        font-family: 'Roboto', sans-serif;
+      }
+
+      &-bottom {
+        font-size: var(--font-size-5xl);
+        color: var(--color-gray-300);
+        font-family: 'Crimson Pro', sans-serif;
+      }
+    }
+
+    &-age {
+        margin-left: 125px;
+
+      &-upper {
+        font-size: var(--font-size-xs);
+        color: var(--color-gray-200);
+        font-family: 'Roboto', sans-serif;
+      }
+
+      &-bottom {
+        font-size: var(--font-size-5xl);
+        color: var(--color-gray-300);
+        font-family: 'Crimson Pro', sans-serif;
+      }
+    }
+  }
+
+  &-payment {
+    margin-right: 50px;
+
+    &-block {
+      width: 154px;
+      height: 45px;
+      border: 0;
+      cursor: pointer;
+      background-color: var(--color-crimson);
+      border-radius: var(--br-3xl-5);
+      font-size: var(--font-size-sm);
+      color: var(--color-white);
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      align-content: center;
+      &:hover {
+        animation: bounce .75s;
+      }
+    }
+  }
+}
+
+.event__description {
+  margin-top: 50px;
+  margin-left: 50px;
+
+  &-block {
+    letter-spacing: 0.2px;
+    line-height: 18px;
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-300);
+    font-family: 'Crimson Pro', sans-serif;
+  }
+}

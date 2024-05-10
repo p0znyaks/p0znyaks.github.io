@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Мероприятие</title>
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./booking.css" />
+    <link rel="stylesheet" href="./event.css" />
+    <link rel="stylesheet" href="./burger.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap" rel="stylesheet">
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=SeoulNamsan CBL:wght@400&display=swap"
+    />
+    <script type="text/javascript" src="events.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="header__menu-bar">
+        <div class="header__menu-bar-logo">
+            <a href="index.html" target="_self"><img alt="" src="./public/logo.svg"/></a>
+        </div>
+        <div class="header__burger-menu">
+            <label for="burger-toggle" class="burger-icon">&#9776;</label>
+            <input type="checkbox" id="burger-toggle">
+            <ul class="burger-menu">
+                <li><a class="burger-a" href="index.html" target="_self">Главная</a></li>
+                <li><a class="burger-a" href="index.html#collection">Афиша</a></li>
+                <li><a class="burger-a" href="news.html" target="_self">Новости</a></li>
+                <li><a class="burger-a" href="brief.html" target="_self">О театре</a></li>
+            </ul>
+        </div>
+        <div class="header__menu-bar-menu">
+            <div class="header__menu-bar-menu-item"><a href="index.html" target="_self">Главная</a></div>
+            <div class="header__menu-bar-menu-item"><a href="index.html#collection">Афиша</a></div>
+            <div class="header__menu-bar-menu-item"><a href="news.html" target="_self">Новости</a></div>
+            <div class="header__menu-bar-menu-item"><a href="brief.html">О театре</a></div>
+        </div>
+    </div>
+    <div class="header__image">
+        <img id="eventImage" src="" alt="">
+    </div>
+</div>
+
+<div class="event__information">
+    <div class="event__information-title">
+        <div id="eventName" class="event__information-title-upper"></div>
+        <div class="event__information-title-bottom">драма в одном действии</div>
+    </div>
+    <div class="event__information-misc">
+        <div class="event__information-misc-time">
+            <div class="event__information-misc-time-upper">Длительность</div>
+            <div class="event__information-misc-time-bottom">1 ч. 40 мин</div>
+        </div>
+        <div class="event__information-misc-age">
+            <div class="event__information-misc-age-upper">Ограничение</div>
+            <div class="event__information-misc-age-bottom">14+</div>
+        </div>
+    </div>
+    <div class="event__information-payment">
+        <a href="booking.html"><button class="event__information-payment-block">Купить билет</button></a>
+    </div>
+</div>
+
+<div class="event__description">
+    <div id="eventDesc" class="event__description-block">
+
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

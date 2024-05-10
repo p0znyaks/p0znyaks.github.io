@@ -1,0 +1,70 @@
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    transform: translateY(0); }
+  40% {
+    transform: translateY(-20px); }
+  80% {
+    transform: translateY(-10px); } }
+.event__information {
+  margin-top: 50px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-between; }
+  .event__information-title-upper {
+    font-size: var(--font-size-17xl);
+    color: var(--color-gray-300);
+    font-family: 'Roboto', sans-serif; }
+  .event__information-title-bottom {
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-300);
+    font-family: 'Crimson Pro', sans-serif; }
+  .event__information-misc {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around; }
+    .event__information-misc-time-upper {
+      font-size: var(--font-size-xs);
+      color: var(--color-gray-200);
+      font-family: 'Roboto', sans-serif; }
+    .event__information-misc-time-bottom {
+      font-size: var(--font-size-5xl);
+      color: var(--color-gray-300);
+      font-family: 'Crimson Pro', sans-serif; }
+    .event__information-misc-age {
+      margin-left: 125px; }
+      .event__information-misc-age-upper {
+        font-size: var(--font-size-xs);
+        color: var(--color-gray-200);
+        font-family: 'Roboto', sans-serif; }
+      .event__information-misc-age-bottom {
+        font-size: var(--font-size-5xl);
+        color: var(--color-gray-300);
+        font-family: 'Crimson Pro', sans-serif; }
+  .event__information-payment {
+    margin-right: 50px; }
+    .event__information-payment-block {
+      width: 154px;
+      height: 45px;
+      border: 0;
+      cursor: pointer;
+      background-color: var(--color-crimson);
+      border-radius: var(--br-3xl-5);
+      font-size: var(--font-size-sm);
+      color: var(--color-white);
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      align-content: center; }
+      .event__information-payment-block:hover {
+        animation: bounce .75s; }
+
+.event__description {
+  margin-top: 50px;
+  margin-left: 50px; }
+  .event__description-block {
+    letter-spacing: 0.2px;
+    line-height: 18px;
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-300);
+    font-family: 'Crimson Pro', sans-serif; }
+
+/*# sourceMappingURL=event.css.map */

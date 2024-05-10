@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Бронирование мест</title>
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./booking.css" />
+    <link rel="stylesheet" href="./burger.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap" rel="stylesheet">
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=SeoulNamsan CBL:wght@400&display=swap"
+    />
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header__menu-bar">
+            <div class="header__menu-bar-logo">
+                <a href="index.html" target="_self"><img alt="" src="./public/logo.svg"/></a>
+            </div>
+            <div class="header__burger-menu">
+                <label for="burger-toggle" class="burger-icon">&#9776;</label>
+                <input type="checkbox" id="burger-toggle">
+                <ul class="burger-menu">
+                    <li><a class="burger-a" href="index.html" target="_self">Главная</a></li>
+                    <li><a class="burger-a" href="index.html#collection">Афиша</a></li>
+                    <li><a class="burger-a" href="news.html" target="_self">Новости</a></li>
+                    <li><a class="burger-a" href="brief.html" target="_self">О театре</a></li>
+                </ul>
+            </div>
+            <div class="header__menu-bar-menu">
+                <div class="header__menu-bar-menu-item"><a href="index.html" target="_self">Главная</a></div>
+                <div class="header__menu-bar-menu-item"><a href="index.html#collection">Афиша</a></div>
+                <div class="header__menu-bar-menu-item"><a href="news.html" target="_self">Новости</a></div>
+                <div class="header__menu-bar-menu-item"><a href="brief.html" target="_self">О театре</a></div>
+            </div>
+        </div>
+        <div class="header__image">
+            <span></span>
+        </div>
+    </div>
+
+    <div class="buying">
+        <div class="buying__info">
+            Покупка билета
+        </div>
+        <div class="buying__price">
+            30 рублей
+        </div>
+    </div>
+
+    <div class="panorama">
+        <div class="panorama__info">
+            <p >Выберите дату показа премьеры</p>
+            <div class="panorama__info-date-choice-buttons">
+                <button id="myButton" class="panorama__info-date-choice-buttons-month-button">
+                        24 Мая, 18:30
+                </button>
+                <button class="panorama__info-date-choice-buttons-month-button">
+                    22 Июня, 18:30
+                </button>
+            </div>
+            <p class="panorama__info__p">Внимание! Выбранные вами билеты должны быть оплачены
+            банковской картой в течение 30 минут. Обязательно распечатайте
+            приобретенный вами электронный билет. Его необходимо
+            предъявить при входе в театр.</p>
+            <div class="panorama__info-actions">
+                <button class="panorama__info-actions-action panorama__info-actions-action_payment"
+                        onclick="openForm()">
+                    Оплатить билет
+                </button>
+                <button class="panorama__info-actions-action panorama__info-actions-action_cancel">Отменить</button>
+            </div>
+        </div>
+        <div class="panorama__scheme">
+            <div class="panorama__scheme__title">Схема зала</div>
+            <div class="panorama__scheme-row-1">
+                <span class="panorama__scheme-row-number">1</span>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">1</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">2</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">3</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">4</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">5</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">6</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">7</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">8</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">9</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">10</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">11</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">12</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">13</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">14</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">15</div>
+            </div>
+            <div class="panorama__scheme-row-2">
+                <span class="panorama__scheme-row-number">2</span>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">1</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">2</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">3</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">4</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">5</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">6</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">7</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">8</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">9</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">10</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">11</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">12</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">13</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">14</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">15</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">16</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">17</div>
+            </div>
+            <div class="panorama__scheme-row-3">
+                <span class="panorama__scheme-row-number">3</span>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">1</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">2</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">3</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">4</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">5</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">6</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">7</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">8</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">9</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">10</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">11</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">12</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">13</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">14</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">15</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">16</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">17</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">18</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">19</div>
+            </div>
+            <div class="panorama__scheme-row-4">
+                <span class="panorama__scheme-row-number">4</span>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">1</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">2</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">3</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">4</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">5</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">6</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">7</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">8</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">9</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">10</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">11</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">12</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">13</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">14</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">15</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">16</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">17</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">18</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">19</div>
+            </div>
+            <div class="panorama__scheme-row-5">
+                <span class="panorama__scheme-row-number">5</span>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">1</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">2</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">3</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">4</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">5</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">6</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">7</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">8</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">9</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">10</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">11</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">12</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">13</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">14</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">15</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">16</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">17</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">18</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">19</div>
+            </div>
+            <div class="panorama__scheme-row-6">
+                <span class="panorama__scheme-row-number">6</span>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">1</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">2</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">3</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">4</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">5</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">6</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">7</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">8</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">9</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">10</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">11</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">12</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">13</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">14</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">15</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">16</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">17</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">18</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">19</div>
+            </div>
+            <div class="panorama__scheme-row-7">
+                <span class="panorama__scheme-row-number">7</span>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">1</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">2</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">3</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">4</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">5</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">6</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">7</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">8</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">9</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">10</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">11</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">12</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">13</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">14</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">15</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">16</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">17</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">18</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">19</div>
+            </div>
+            <div class="panorama__scheme-row-8">
+                <span class="panorama__scheme-row-number">8</span>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">1</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">2</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">3</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">4</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">5</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">6</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">7</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">8</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">9</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">10</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">11</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">12</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">13</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">14</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">15</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">16</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">17</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">18</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">19</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">20</div>
+            </div>
+            <div class="panorama__scheme-row-9">
+                <span class="panorama__scheme-row-number">9</span>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">1</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">2</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">3</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">4</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">5</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">6</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">7</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">8</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">9</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">10</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">11</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">12</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">13</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">14</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">15</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">16</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">17</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">18</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">19</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">20</div>
+            </div>
+            <div class="panorama__scheme-row-10">
+                <span class="panorama__scheme-row-number">10</span>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">1</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">2</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">3</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">4</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">5</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">6</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">7</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">8</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">9</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">10</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">11</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">12</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">13</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">14</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">15</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">16</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">17</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">18</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">19</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">20</div>
+            </div>
+            <div class="panorama__scheme-row-11">
+                <span class="panorama__scheme-row-number">11</span>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">1</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">2</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">3</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">4</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">5</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">6</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">7</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">8</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">9</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">10</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">11</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">12</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">13</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">14</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">15</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">16</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">17</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">18</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">19</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">20</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">21</div>
+            </div>
+            <div class="panorama__scheme-row-12">
+                <span class="panorama__scheme-row-number">12</span>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">1</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">2</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">3</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">4</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">5</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">6</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">7</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">8</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">9</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">10</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">11</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">12</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">13</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">14</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">15</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">16</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">17</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">18</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">19</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">20</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">21</div>
+            </div>
+            <div class="panorama__scheme-row-13">
+                <span class="panorama__scheme-row-number">13</span>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">1</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">2</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">3</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">4</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">5</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">6</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">7</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">8</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">9</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">10</div>
+            </div>
+            <div class="panorama__scheme-row-14">
+                <span class="panorama__scheme-row-number">14</span>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">1</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">2</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">3</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">4</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">5</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">6</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">7</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">8</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">9</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">10</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">11</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">12</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">13</div>
+                <div class="panorama__scheme-seat" onclick="reserveSeat(this)">14</div>
+            </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
