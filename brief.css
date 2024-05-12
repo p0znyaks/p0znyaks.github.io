@@ -23,7 +23,7 @@
   background-color: var(--color-gray-500);
   padding: 0 var(--padding-31xl);
   box-sizing: border-box;
-  z-index: 99;
+  margin-top: 50px;
   position: sticky;
   text-align: left;
   font-size: var(--font-size-xs);
@@ -270,6 +270,9 @@
 
   .history-title__history-content {
     flex-wrap: wrap; } }
+@media screen and (max-width: 768px) {
+  .header__menu-bar-menu {
+    display: none; } }
 @media screen and (max-width: 750px) {
   .history-title__history-content__details {
     min-width: 100%; }
@@ -284,11 +287,9 @@
 
   .body {
     gap: 60px; } }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .body {
-    width: 600px; } }
-@media screen and (max-width: 450px) {
-  .body {
+    width: 600px;
     gap: 30px; } }
 
 /*# sourceMappingURL=brief.css.map */

@@ -129,6 +129,7 @@ a:hover {
 
 .information__short-information {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 780px;
 }
@@ -142,7 +143,7 @@ a:hover {
   text-decoration: underline;
   letter-spacing: 0.2px;
   text-align: right;
-  margin: 40px 50px 35px 20px;
+  margin: 40px 50px 45px 20px;
 }
 
 .content__nearest_premiers-title {
@@ -150,6 +151,7 @@ a:hover {
   color: var(--color-gray-300);
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.2px;
+  margin-top: 35px;
   margin-left: 50px;
 }
 
