@@ -296,7 +296,7 @@ a:hover {
 .news__block-row {
   display: flex;
   gap: 35px;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
 }
 
 .news__block-line-bottom {
@@ -457,7 +457,6 @@ a:hover {
 
   .news__block-row {
     flex-direction: column;
-    gap: 20px;
   }
 
   .news__block-description {

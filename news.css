@@ -11,6 +11,9 @@
   .news__all-news-block-line-top-left {
     object-fit: cover; }
 
+.news__block-row {
+  margin-bottom: 25px; }
+
 @media screen and (max-width: 1420px) {
   .news {
     flex-direction: column;
