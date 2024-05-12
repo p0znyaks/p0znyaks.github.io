@@ -61,15 +61,48 @@
         </div>
     </div>
     <div class="event__information-payment">
-        <a href="booking.html"><button class="event__information-payment-block">Купить билет</button></a>
+        <button class="event__information-payment-block">Купить билет</button>
     </div>
 </div>
 
 <div class="event__description">
-    <div id="eventDesc" class="event__description-block">
-
+    <div id="eventDescription" class="event__description-block">
     </div>
 </div>
 <script src="script.js"></script>
+<script>
+    // Получить идентификатор новости из URL
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const eventId = urlParams.get('eventId');
+
+    // Асинхронно загрузить данные конкретной новости и отобразить их на странице
+    async function displayEventContent() {
+        const content = await getEventContent(parseInt(eventId));
+        if (content) {
+            document.getElementById('eventName').innerText = content.name;
+            document.getElementById('eventDescription').innerText = content.description;
+            document.getElementById('eventImage').src = content.image;
+        } else {
+            console.error('Не удалось загрузить данные мероприятия');
+        }
+    }
+
+    displayEventContent();
+
+    function showBooking(eventId) {
+        window.location.href = `booking.html?eventId=${eventId}`;
+    }
+
+    if (eventId === '1') {
+        const buyTicketButton = document.querySelector('.event__information-payment-block');
+        buyTicketButton.addEventListener('click', () => showBooking('1'));
+    }
+
+    if (eventId === '2') {
+        const buyTicketButton = document.querySelector('.event__information-payment-block');
+        buyTicketButton.addEventListener('click', () => showBooking('2'));
+    }
+</script>
 </body>
 </html>

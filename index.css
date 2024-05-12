@@ -16,7 +16,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-crimson);
+    color: var(--color-crimson);
 }
 
 .header__image-container {
@@ -415,6 +415,10 @@ a:hover {
 
 .child5 {
   top: 1899px;
+}
+
+.news__block-line-top-left img {
+  object-fit: cover;
 }
 
 @media screen and (max-width: 1340px) {

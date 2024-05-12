@@ -349,6 +349,13 @@
     gap: 60px;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .body {
+    width: 600px;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .body {
     gap: 30px;

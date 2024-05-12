@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <title>Бронирование мест</title>
     <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./booking.css" />
@@ -16,6 +16,7 @@
     />
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="popup.js"></script>
+    <script type="text/javascript" src="events.js"></script>
 </head>
 <body>
     <div class="header">
@@ -41,7 +42,7 @@
             </div>
         </div>
         <div class="header__image">
-            <span></span>
+            <img id="eventImage" src="" alt="">
         </div>
     </div>
 
@@ -56,13 +57,11 @@
 
     <div class="panorama">
         <div class="panorama__info">
-            <p >Выберите дату показа премьеры</p>
+            <p>Выберите дату показа</p>
             <div class="panorama__info-date-choice-buttons">
-                <button id="myButton" class="panorama__info-date-choice-buttons-month-button">
-                        24 Мая, 18:30
+                <button id="eventDate" class="panorama__info-date-choice-buttons-month-button">
                 </button>
-                <button class="panorama__info-date-choice-buttons-month-button">
-                    22 Июня, 18:30
+                <button id="eventLateDate" class="panorama__info-date-choice-buttons-month-button">
                 </button>
             </div>
             <p class="panorama__info__p">Внимание! Выбранные вами билеты должны быть оплачены
@@ -376,6 +375,26 @@
             </div>
     </div>
     </div>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const eventId = urlParams.get('eventId');
+
+        async function displayEventContent() {
+            const content = await getEventContent(parseInt(eventId));
+            if (content) {
+                // document.getElementById('eventName').innerText = content.name;
+                // document.getElementById('eventDescription').innerText = content.description;
+                document.getElementById('eventImage').src = content.image;
+                document.getElementById('eventDate').innerText = content.date;
+                document.getElementById('eventLateDate').innerText = content.lateDate;
+            } else {
+                console.error('Не удалось загрузить данные мероприятия');
+            }
+        }
+
+        displayEventContent();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

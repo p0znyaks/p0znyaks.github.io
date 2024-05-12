@@ -11,6 +11,9 @@
     display: flex;
     justify-content: center;
     margin-left: -275px;
+    &-line-top-left {
+      object-fit: cover;
+    }
   }
 }
 
@@ -60,6 +63,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .news__all-news {
+    width: 600px;
+    margin-left: 5px;
+  }
   .news__block-line-top-left img,
   .news__block-line-top-right img,
   .news__block-line-bottom-left img,

@@ -1,35 +1,30 @@
-window.onload = function() {
-    var urlParams = new URLSearchParams(window.location.search);
-    var eventNum = urlParams.get('event');
+async function getEventDataFromXML() {
+    try {
+        const response = await fetch('events.xml'); // Укажите путь к вашему файлу XML
+        const xmlText = await response.text();
 
-    var eventName, eventImage, eventDescription;
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
 
-    // Загрузка XML-файла events.xml
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState === 4 && this.status === 200) {
-            var xmlDoc = this.responseXML;
-            var events = xmlDoc.getElementsByTagName("event");
+        return xmlDoc;
+    } catch (error) {
+        console.error('Ошибка при получении данных из XML:', error);
+        return null;
+    }
+}
 
-            for (var i = 0; i < events.length; i++) {
-                var event = events[i];
-                var name = event.querySelector('name').textContent;
-                var description = event.querySelector('description').textContent;
-                var image = event.querySelector('image').textContent;
+async function getEventContent(eventId) {
+    const xmlDoc = await getEventDataFromXML();
 
-                if (eventNum === (i + 1).toString()) {
-                    eventName = name;
-                    eventImage = image;
-                    eventDescription = description;
-                    break;
-                }
-            }
+    if (xmlDoc) {
+        const eventName = xmlDoc.getElementsByTagName('name')[eventId - 1].childNodes[0].nodeValue;
+        const eventDescription = xmlDoc.getElementsByTagName('description')[eventId - 1].childNodes[0].nodeValue;
+        const eventImage = xmlDoc.getElementsByTagName('image')[eventId - 1].childNodes[0].nodeValue;
+        const eventDate = xmlDoc.getElementsByTagName('date')[eventId - 1].childNodes[0].nodeValue;
+        const eventLateDate = xmlDoc.getElementsByTagName('lateDate')[eventId - 1].childNodes[0].nodeValue;
 
-            document.getElementById("eventName").innerHTML = eventName;
-            document.getElementById("eventImage").src = eventImage;
-            document.getElementById("eventDesc").innerHTML = eventDescription;
-        }
-    };
-    xhttp.open("GET", "events.xml", true);
-    xhttp.send();
-};
+        return { name: eventName, description: eventDescription, image: eventImage, date: eventDate, lateDate: eventLateDate };
+    } else {
+        return null;
+    }
+}

@@ -12,6 +12,13 @@
   }
 }
 
+.header {
+  &__image img {
+    height: 650px;
+    object-fit: cover;
+  }
+}
+
 .event__information {
   margin-top: 50px;
   margin-left: 50px;
@@ -102,5 +109,32 @@
     font-size: var(--font-size-sm);
     color: var(--color-gray-300);
     font-family: 'Crimson Pro', sans-serif;
+  }
+}
+
+@media screen and (max-width: 850px) {
+.event__information-misc-age {
+  margin-left: 8px;
+}
+}
+
+@media screen and (max-width: 725px) {
+  .event__information-misc-age {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header__image {
+    width: 600px;
+  }
+  .event__information-misc {
+    margin-left: 50px;
+  }
+  .event__information-payment {
+    margin-left: 100px;
+  }
+  .event__description-block {
+    width: 500px;
   }
 }

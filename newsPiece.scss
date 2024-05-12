@@ -1,0 +1,29 @@
+.content__news {
+  margin-left: 50px;
+  &__date {
+    margin-top: 40px;
+    font-size: var(--font-size-xl);
+    color: var(--color-silver-200);
+    font-family: 'Roboto', sans-serif;
+  }
+  &__title {
+    font-size: var(--font-size-17xl);
+    color: var(--color-gray-300);
+    font-family: 'Roboto', sans-serif;
+  }
+  &__description {
+    margin-top: 35px;
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-300);
+    font-family: 'Crimson Pro', sans-serif;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header__image {
+    width: 600px;
+  }
+  .content__news {
+    width: 500px;
+  }
+}
