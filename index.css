@@ -237,7 +237,7 @@ a:hover {
 .footer__text {
   display: flex;
   align-items: center;
-  background-color: crimson;
+  background-color: var(--color-crimson);
   margin-top: 35px;
   height: 125px;
   text-align: left;
