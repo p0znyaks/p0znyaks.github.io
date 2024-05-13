@@ -3,7 +3,7 @@
   max-height: 100%;
   object-fit: cover;
   height: 650px;
-  width: 1550px; }
+  width: 100%; }
 .header__menu-bar {
   display: flex;
   align-items: center; }
@@ -169,15 +169,9 @@
     .panorama__scheme {
       margin-top: 35px; } }
 @media screen and (max-width: 875px) {
-  .header__image {
-    width: 880px; }
-
   .buying {
     width: 880px; } }
 @media screen and (max-width: 600px) {
-  .header__image {
-    width: 600px; }
-
   .buying {
     width: 600px; } }
 

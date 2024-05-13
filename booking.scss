@@ -4,7 +4,7 @@
     max-height: 100%;
     object-fit: cover;
     height: 650px;
-    width: 1550px;
+    width: 100%;
   }
 
   &__menu-bar {
@@ -39,6 +39,7 @@
     a {
       text-decoration: none;
       color: var(--color-gray-300);
+
       &:hover {
         color: var(--color-crimson);
       }
@@ -54,7 +55,7 @@
     font-size: var(--font-size-17xl);
     color: var(--color-gray-300);
     font-family: 'Roboto', sans-serif;
-    width:302px;
+    width: 302px;
     height: 120px;
     display: flex;
     flex-direction: column;
@@ -68,7 +69,7 @@
     color: var(--color-white);
     font-family: 'Roboto', sans-serif;
     -webkit-text-stroke: 1px #000000;
-    width:302px;
+    width: 302px;
     height: 120px;
     display: flex;
     justify-content: center;
@@ -109,15 +110,16 @@
       cursor: pointer;
       width: 127px;
       background-color: var(--color-white);
-      padding: var(--padding-2xs) var(--padding-xl) var(--padding-3xs)
-      var(--padding-2xl);
+      padding: var(--padding-2xs) var(--padding-xl) var(--padding-3xs) var(--padding-2xl);
       font-family: 'Crimson Pro', sans-serif;
       font-size: var(--font-size-lg);
       color: var(--color-gray-300);
+
       &:hover {
         background-color: var(--color-crimson);
         scale: 1.1;
       }
+
       &:focus {
         background-color: var(--color-crimson);
       }
@@ -144,10 +146,11 @@
         font-size: var(--font-size-lg);
         color: var(--color-white);
         font-family: 'Roboto', sans-serif;
+
         &:hover {
           border: 3px dotted #fa434b;
           color: #000000;
-          background: rgba(0,0,0,0);
+          background: rgba(0, 0, 0, 0);
         }
       }
 
@@ -157,9 +160,10 @@
         font-size: var(--font-size-lg);
         color: var(--color-gray-300);
         font-family: 'Roboto', sans-serif;
+
         &:hover {
           border: 3px dotted #c4c4c4;
-          background: rgba(0,0,0,0);
+          background: rgba(0, 0, 0, 0);
         }
       }
     }
@@ -173,6 +177,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
     &__title {
       text-align: center;
       font-size: var(--font-size-lg);
@@ -237,6 +242,7 @@
 @media screen and (max-width: 1010px) {
   .panorama {
     flex-direction: column;
+
     &__scheme {
       margin-top: 35px;
     }
@@ -244,18 +250,12 @@
 }
 
 @media screen and (max-width: 875px) {
-  .header__image {
-      width: 880px;
-    }
   .buying {
     width: 880px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .header__image {
-    width: 600px;
-  }
   .buying {
     width: 600px;
   }

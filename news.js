@@ -1,6 +1,6 @@
 async function getNewsDataFromXML() {
     try {
-        const response = await fetch('news.xml'); // Укажите путь к вашему файлу XML
+        const response = await fetch('news.xml');
         const xmlText = await response.text();
 
         const parser = new DOMParser();

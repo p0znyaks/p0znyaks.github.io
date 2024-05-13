@@ -7,12 +7,9 @@
 .news__all-news-block {
   display: flex;
   justify-content: center;
-  margin-left: -275px; }
+  margin-left: -205px; }
   .news__all-news-block-line-top-left {
     object-fit: cover; }
-
-.news__block-row {
-  margin-bottom: 25px; }
 
 @media screen and (max-width: 1420px) {
   .news {

@@ -1,0 +1,78 @@
+.team__content {
+  &__block {
+    &__title {
+      font-size: 48px;
+      color: var(--color-gray-300);
+      font-family: 'Roboto', sans-serif;
+      letter-spacing: 0.2px;
+      margin-left: 50px;
+      margin-top: 35px;
+    }
+
+    &__about {
+      font-size: var(--font-size-17xl);
+      color: var(--color-white);
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--color-crimson);
+      border-radius: var(--br-sm);
+      align-content: center;
+      text-align: left;
+      width: 748px;
+      height: 48px;
+      letter-spacing: 0.2px;
+      margin-left: 50px;
+      margin-top: 60px;
+    }
+    &__items,
+    &__itemsActors, {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 45px;
+      gap: 45px;
+      &__section {
+        display: flex;
+        flex-direction: row;
+        gap: 45px;
+      }
+      &__item {
+        font-size: var(--font-size-sm);
+        color: var(--color-gray-400);
+        font-family: 'Crimson Pro', sans-serif
+      }
+    }
+  }
+}
+
+.object {
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 1195px) {
+  .team__content__block__items,
+  .team__content__block__itemsActors
+  {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    &__section {
+      gap: 150px;
+    }
+  }
+  .team__content__block__itemsActors {
+
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .team__content__block__items,
+  .team__content__block__itemsActors {
+    width: 768px;
+    &__section {
+      gap: 150px;
+    }
+  }
+  .header__menu-bar-menu {
+    display: none;
+  }
+}
