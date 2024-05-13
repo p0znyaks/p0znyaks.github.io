@@ -1,6 +1,6 @@
 async function getEventDataFromXML() {
     try {
-        const response = await fetch('events.xml'); // Укажите путь к вашему файлу XML
+        const response = await fetch('events.xml');
         const xmlText = await response.text();
 
         const parser = new DOMParser();
@@ -22,8 +22,11 @@ async function getEventContent(eventId) {
         const eventImage = xmlDoc.getElementsByTagName('image')[eventId - 1].childNodes[0].nodeValue;
         const eventDate = xmlDoc.getElementsByTagName('date')[eventId - 1].childNodes[0].nodeValue;
         const eventLateDate = xmlDoc.getElementsByTagName('lateDate')[eventId - 1].childNodes[0].nodeValue;
+        const eventAge = xmlDoc.getElementsByTagName('age')[eventId - 1].childNodes[0].nodeValue;
+        const eventTime = xmlDoc.getElementsByTagName('time')[eventId - 1].childNodes[0].nodeValue;
 
-        return { name: eventName, description: eventDescription, image: eventImage, date: eventDate, lateDate: eventLateDate };
+
+        return { name: eventName, description: eventDescription, image: eventImage, date: eventDate, lateDate: eventLateDate, age: eventAge, time: eventTime };
     } else {
         return null;
     }

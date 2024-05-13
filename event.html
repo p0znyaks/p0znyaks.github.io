@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap" rel="stylesheet">
     <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=SeoulNamsan CBL:wght@400&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
     />
     <script type="text/javascript" src="events.js"></script>
 </head>
@@ -28,14 +28,14 @@
             <input type="checkbox" id="burger-toggle">
             <ul class="burger-menu">
                 <li><a class="burger-a" href="index.html" target="_self">Главная</a></li>
-                <li><a class="burger-a" href="index.html#collection">Афиша</a></li>
+                <li><a class="burger-a" href="poster.html">Афиша</a></li>
                 <li><a class="burger-a" href="news.html" target="_self">Новости</a></li>
                 <li><a class="burger-a" href="brief.html" target="_self">О театре</a></li>
             </ul>
         </div>
         <div class="header__menu-bar-menu">
             <div class="header__menu-bar-menu-item"><a href="index.html" target="_self">Главная</a></div>
-            <div class="header__menu-bar-menu-item"><a href="index.html#collection">Афиша</a></div>
+            <div class="header__menu-bar-menu-item"><a href="poster.html">Афиша</a></div>
             <div class="header__menu-bar-menu-item"><a href="news.html" target="_self">Новости</a></div>
             <div class="header__menu-bar-menu-item"><a href="brief.html">О театре</a></div>
         </div>
@@ -48,16 +48,15 @@
 <div class="event__information">
     <div class="event__information-title">
         <div id="eventName" class="event__information-title-upper"></div>
-        <div class="event__information-title-bottom">драма в одном действии</div>
     </div>
     <div class="event__information-misc">
         <div class="event__information-misc-time">
             <div class="event__information-misc-time-upper">Длительность</div>
-            <div class="event__information-misc-time-bottom">1 ч. 40 мин</div>
+            <div id="eventTime" class="event__information-misc-time-bottom">1 ч. 40 мин</div>
         </div>
         <div class="event__information-misc-age">
             <div class="event__information-misc-age-upper">Ограничение</div>
-            <div class="event__information-misc-age-bottom">14+</div>
+            <div id="eventAge" class="event__information-misc-age-bottom">14+</div>
         </div>
     </div>
     <div class="event__information-payment">
@@ -71,18 +70,18 @@
 </div>
 <script src="script.js"></script>
 <script>
-    // Получить идентификатор новости из URL
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const eventId = urlParams.get('eventId');
 
-    // Асинхронно загрузить данные конкретной новости и отобразить их на странице
     async function displayEventContent() {
         const content = await getEventContent(parseInt(eventId));
         if (content) {
             document.getElementById('eventName').innerText = content.name;
             document.getElementById('eventDescription').innerText = content.description;
             document.getElementById('eventImage').src = content.image;
+            document.getElementById('eventAge').innerText = content.age;
+            document.getElementById('eventTime').innerText = content.time;
         } else {
             console.error('Не удалось загрузить данные мероприятия');
         }
@@ -102,6 +101,33 @@
     if (eventId === '2') {
         const buyTicketButton = document.querySelector('.event__information-payment-block');
         buyTicketButton.addEventListener('click', () => showBooking('2'));
+    }
+    if (eventId === '3') {
+        const buyTicketButton = document.querySelector('.event__information-payment-block');
+        buyTicketButton.addEventListener('click', () => showBooking('3'));
+    }
+
+    if (eventId === '4') {
+        const buyTicketButton = document.querySelector('.event__information-payment-block');
+        buyTicketButton.addEventListener('click', () => showBooking('4'));
+    }
+    if (eventId === '5') {
+        const buyTicketButton = document.querySelector('.event__information-payment-block');
+        buyTicketButton.addEventListener('click', () => showBooking('5'));
+    }
+
+    if (eventId === '6') {
+        const buyTicketButton = document.querySelector('.event__information-payment-block');
+        buyTicketButton.addEventListener('click', () => showBooking('6'));
+    }
+    if (eventId === '7') {
+        const buyTicketButton = document.querySelector('.event__information-payment-block');
+        buyTicketButton.addEventListener('click', () => showBooking('7'));
+    }
+
+    if (eventId === '8') {
+        const buyTicketButton = document.querySelector('.event__information-payment-block');
+        buyTicketButton.addEventListener('click', () => showBooking('8'));
     }
 </script>
 </body>

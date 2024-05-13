@@ -1,0 +1,64 @@
+.poster__content__block__title {
+  font-size: var(--font-size-17xl);
+  color: var(--color-gray-300);
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.2px;
+  margin-left: 50px;
+  margin-top: 35px; }
+.poster__content__block__items {
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px; }
+  .poster__content__block__items__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    .poster__content__block__items__row:nth-child(2) {
+      margin-top: 150px; }
+    .poster__content__block__items__row__item {
+      position: relative;
+      width: 335px;
+      height: 450px;
+      font-size: var(--font-size-sm);
+      color: var(--color-white); }
+      .poster__content__block__items__row__item__info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px; }
+        .poster__content__block__items__row__item__info__title {
+          line-height: 30px;
+          font-size: var(--font-size-xl);
+          color: var(--color-gray-400);
+          font-family: 'Roboto', sans-serif; }
+        .poster__content__block__items__row__item__info__date {
+          line-height: 30px;
+          color: var(--color-silver-200);
+          font-size: var(--font-size-xl);
+          font-family: 'Roboto', sans-serif; }
+
+@media only screen and (max-width: 1000px) {
+  .poster__content__block__items__row__item {
+    margin-bottom: 90px; }
+
+  .poster__content__block__items {
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row; }
+
+  .poster__content__block__items__row {
+    flex-direction: column; }
+    .poster__content__block__items__row:nth-child(2) {
+      margin-top: 0; } }
+@media only screen and (max-width: 768px) {
+  .header__menu-bar-menu {
+    display: none; } }
+@media only screen and (max-width: 700px) {
+  .poster__content__block__items {
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column; } }
+@media only screen and (max-width: 425px) {
+  .poster__content {
+    width: 425px; } }
+
+/*# sourceMappingURL=poster.css.map */
