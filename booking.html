@@ -15,11 +15,10 @@
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
     />
-    <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="popup.js"></script>
     <script type="text/javascript" src="events.js"></script>
 </head>
-<body>
+<body onclick="closeForm(event)">
     <div class="header">
         <div class="header__menu-bar">
             <div class="header__menu-bar-logo">
@@ -74,7 +73,7 @@
             предъявить при входе в театр.</p>
             <div class="panorama__info-actions">
                 <button class="panorama__info-actions-action panorama__info-actions-action_payment"
-                        onclick="openForm()">
+                        onclick="openForm(event)">
                     Оплатить билет
                 </button>
                 <button class="panorama__info-actions-action panorama__info-actions-action_cancel">Отменить</button>
@@ -387,6 +386,15 @@
         tuz_Minsk@yandex.by <br>
         Республика Беларусь 220030,г. Минск, ул.Октябрьская, 26 <br>
     </footer>
+
+    <div id="form" class="form">
+        <form action="/" method="post">
+            <input class="input" id="phoneInput" placeholder="Введите номер телефона" pattern="^\+(?:[0-9] ?){6,14}[0-9]$" type="text">
+            <span id="error" class="error-message"></span>
+            <button class="button" onclick="buyTickets()" type="button">Забронировать</button>
+        </form>
+    </div>
+
     <script>
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);

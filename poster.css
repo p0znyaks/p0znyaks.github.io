@@ -36,6 +36,9 @@
           font-size: var(--font-size-xl);
           font-family: 'Roboto', sans-serif; }
 
+.poster {
+  margin-top: 65px; }
+
 @media only screen and (max-width: 1000px) {
   .poster__content__block__items__row__item {
     margin-bottom: 90px; }
@@ -57,8 +60,5 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column; } }
-@media only screen and (max-width: 425px) {
-  .poster__content {
-    width: 425px; } }
 
 /*# sourceMappingURL=poster.css.map */
