@@ -1,5 +1,7 @@
 .poster__content {
+  width: 100%;
   &__block {
+    margin-left: 15px;
     &__title {
       font-size: var(--font-size-17xl);
       color: var(--color-gray-300);
@@ -21,7 +23,6 @@
         }
         &__item {
           position: relative;
-          width: 335px;
           height: 450px;
           font-size: var(--font-size-sm);
           color: var(--color-white);
@@ -80,11 +81,5 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  .poster__content {
-    width: 425px;
   }
 }

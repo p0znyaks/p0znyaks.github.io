@@ -163,23 +163,6 @@
   transition: opacity .5s;
   opacity: 1; }
 
-@media screen and (max-width: 1010px) {
-  .panorama {
-    flex-direction: column; }
-    .panorama__scheme {
-      margin-top: 35px; } }
-@media screen and (max-width: 600px) {
-  .buying__info {
-    font-size: 28px; } }
-@media screen and (max-width: 530px) {
-  .footer__text {
-    width: 530px; }
-
-  .header__image {
-    width: 530px; }
-
-  .buying {
-    width: 530px; } }
 .form {
   display: none;
   position: fixed;
@@ -220,5 +203,26 @@
 
 .button:hover {
   background-color: #c0392b; }
+
+@media screen and (max-width: 1010px) {
+  .panorama {
+    flex-direction: column; }
+    .panorama__scheme {
+      margin-top: 35px; }
+
+  .form {
+    left: 20%; } }
+@media screen and (max-width: 600px) {
+  .buying__info {
+    font-size: 28px; } }
+@media screen and (max-width: 530px) {
+  .footer__text {
+    width: 530px; }
+
+  .header__image {
+    width: 530px; }
+
+  .buying {
+    width: 530px; } }
 
 /*# sourceMappingURL=booking.css.map */
