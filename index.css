@@ -514,10 +514,21 @@ a:hover {
   .header__title {
     font-size: 44px;
   }
+  .news__block-description,
+  .news__block-title {
+    margin-left: 5px;
+  }
 }
 
 @media screen and (max-width: 510px){
   .information__short-information {
     display: block;
+  }
+}
+
+@media screen and (max-width: 425px){
+  .content__nearest_premiers-list-item-name {
+    font-size: var(--font-size-lg);
+    top: 320px;
   }
 }
