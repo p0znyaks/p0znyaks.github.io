@@ -318,6 +318,10 @@
   }
 }
 
+.footer__text {
+  width: 100%;
+}
+
 @media screen and (max-width: 1200px) {
   .main-page {
     padding-left: var(--padding-6xl);
