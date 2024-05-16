@@ -15,27 +15,6 @@ function reserveSeat(elem) {
     console.log(reservedSeats);
 }
 
-// function buyTickets() {
-//     if (!validateForm()) {
-//         document.getElementById('error').style.display = 'inline';
-//         return;
-//     }
-//     localStorage.setItem(buyerPhone, reservedSeats.toString());
-//     reservedSeats.map(() => 0);
-//     for (let i = 0; i < localStorage.length; i++) {
-//         const key = localStorage.key(i);
-//         const value = JSON.parse(localStorage.getItem(key));
-//         const hasAnyBookedSeat = reservedSeats.some(elem => {
-//             return value.some(e => {
-//                 return elem === e;
-//             })
-//         })
-//         if (hasAnyBookedSeat === true) {
-//             alert("ОШИБКА!!!!")
-//         }
-//     }
-// }
-
 function buyTickets() {
     if (!validateForm()) {
         document.getElementById('error').style.display = 'inline';

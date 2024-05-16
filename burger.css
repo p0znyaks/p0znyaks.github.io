@@ -1,12 +1,11 @@
 .header__burger-menu {
-    position: relative;
-    float: right;
     display: none;
     z-index: 999;
-}
-
-#burger-toggle {
-    display: none;
+    right: 0;
+    position: absolute;
+    top: 3%;
+    padding-right: 15px;
+    transform: translateY(-50%);
 }
 
 .burger-icon {
@@ -14,10 +13,14 @@
     cursor: pointer;
 }
 
+#burger-toggle {
+    display: none;
+}
+
 .burger-menu {
     position: absolute;
     background: #f9f9f9;
-    width: 150px;
+    width: 180px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -29,7 +32,10 @@
 
 .burger-menu li {
     padding: 10px;
+    height: 40px;
+    font-size: var(--font-size-lg);
     text-align: center;
+    align-content: center;
     border-bottom: 1px solid #ccc;
 }
 
