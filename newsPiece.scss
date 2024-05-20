@@ -18,3 +18,15 @@
     font-family: 'Crimson Pro', sans-serif;
   }
 }
+
+@media screen and (max-width: 390px) {
+  .content__news__title {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .content__news__title {
+    font-size: 22px;
+  }
+}

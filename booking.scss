@@ -305,13 +305,62 @@
 }
 
 @media screen and (max-width: 530px) {
-  .footer__text {
-    width: 530px;
+  .panorama {
+    &__scheme {
+      &-row-1,
+      &-row-2,
+      &-row-3,
+      &-row-4,
+      &-row-5,
+      &-row-6,
+      &-row-7,
+      &-row-8,
+      &-row-9,
+      &-row-10,
+      &-row-11,
+      &-row-12,
+      &-row-13,
+      &-row-14,
+      {
+        display: flex;
+        width: 430px;
+        flex-direction: row;
+        align-items: baseline;
+        flex-wrap: nowrap;
+        justify-content: center;
+      }
+    }
   }
-  .header__image {
-    width: 530px;
+}
+
+@media screen and (max-width: 490px) {
+  .panorama {
+    margin-left: 15px;
   }
-  .buying {
-    width: 530px;
+
+  .panorama {
+    &__scheme {
+      &-row-1,
+      &-row-2,
+      &-row-3,
+      &-row-4,
+      &-row-5,
+      &-row-6,
+      &-row-7,
+      &-row-8,
+      &-row-9,
+      &-row-10,
+      &-row-11,
+      &-row-12,
+      &-row-13,
+      &-row-14,
+      {
+        width: 400px;
+      }
+    }
+  }
+
+  .panorama__scheme {
+    width: 400px;
   }
 }

@@ -216,13 +216,21 @@
   .buying__info {
     font-size: 28px; } }
 @media screen and (max-width: 530px) {
-  .footer__text {
-    width: 530px; }
+  .panorama__scheme-row-1, .panorama__scheme-row-2, .panorama__scheme-row-3, .panorama__scheme-row-4, .panorama__scheme-row-5, .panorama__scheme-row-6, .panorama__scheme-row-7, .panorama__scheme-row-8, .panorama__scheme-row-9, .panorama__scheme-row-10, .panorama__scheme-row-11, .panorama__scheme-row-12, .panorama__scheme-row-13, .panorama__scheme-row-14 {
+    display: flex;
+    width: 430px;
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    justify-content: center; } }
+@media screen and (max-width: 490px) {
+  .panorama {
+    margin-left: 15px; }
 
-  .header__image {
-    width: 530px; }
+  .panorama__scheme-row-1, .panorama__scheme-row-2, .panorama__scheme-row-3, .panorama__scheme-row-4, .panorama__scheme-row-5, .panorama__scheme-row-6, .panorama__scheme-row-7, .panorama__scheme-row-8, .panorama__scheme-row-9, .panorama__scheme-row-10, .panorama__scheme-row-11, .panorama__scheme-row-12, .panorama__scheme-row-13, .panorama__scheme-row-14 {
+    width: 400px; }
 
-  .buying {
-    width: 530px; } }
+  .panorama__scheme {
+    width: 400px; } }
 
 /*# sourceMappingURL=booking.css.map */

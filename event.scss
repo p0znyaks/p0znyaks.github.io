@@ -114,12 +114,27 @@
 
 @media screen and (max-width: 850px) {
 .event__information-misc-age {
-  margin-left: 8px;
+  margin-left: 20px;
 }
 }
 
 @media screen and (max-width: 725px) {
   .event__information-misc-age {
     margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .event__information {
+    flex-direction: column;
+  }
+  .event__information-title {
+    margin-bottom: 10px;
+  }
+  .event__information-misc {
+    margin-bottom: 30px;
+  }
+  .event__information-misc-age {
+    margin-left: 20px;
   }
 }
