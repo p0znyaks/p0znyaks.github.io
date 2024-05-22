@@ -20,30 +20,30 @@ function buyTickets() {
         document.getElementById('error').style.display = 'inline';
         return;
     }
-    const buyerPhone = document.getElementById('buyerPhone').value; // убедитесь, что это поле существует в вашем HTML
-    localStorage.setItem(buyerPhone, JSON.stringify(Array.from(reservedSeats.entries())));  // Преобразование Map в массив и сохранение как строка JSON
+    const buyerPhone = document.getElementById('buyerPhone').value;
+    localStorage.setItem(buyerPhone, JSON.stringify(Array.from(reservedSeats.entries())));
 
-    reservedSeats.clear(); // Очистка карты после сохранения
-    console.log('Tickets purchased: ', localStorage.getItem(buyerPhone)); // Опционально: логирование для проверки
+    reservedSeats.clear();
+    console.log('Купленные билеты: ', localStorage.getItem(buyerPhone));
 }
 
 function displayReservedSeats(phoneNumber) {
     if (!phoneNumber) {
-        console.error('No phone number provided');
+        console.error('Нет номера телефона');
         return;
     }
     const reservedSeatsData = JSON.parse(localStorage.getItem(phoneNumber));
     if (!reservedSeatsData) {
-        console.log('No reservations found for this number');
+        console.log('нет зарезервированных мест');
         return;
     }
 
-    console.log(`Reserved seats for ${phoneNumber}:`);
+    console.log(`Зарезервированные места для ${phoneNumber}:`);
     reservedSeatsData.forEach(([row, seats]) => {
         const reservedNumbers = seats.map((seat, index) => seat === 1 ? index + 1 : null).filter(n => n);
         console.log(`Row ${row}: Seats ${reservedNumbers.join(', ')}`);
     });
-    displayReservedSeats('1234567890'); // Замените значение на реальный номер телефона пользователя
+    displayReservedSeats('1234567890');
 }
 
 
