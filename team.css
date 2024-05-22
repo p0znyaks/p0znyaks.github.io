@@ -13,7 +13,6 @@
   border-radius: var(--br-sm);
   align-content: center;
   text-align: left;
-  width: 748px;
   height: 48px;
   letter-spacing: 0.2px;
   margin-left: 50px;
@@ -36,6 +35,15 @@
 .object {
   object-fit: cover; }
 
+.footer__text {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-crimson);
+  margin-top: 35px;
+  color: var(--color-white);
+  height: 135px;
+  text-align: left; }
+
 @media only screen and (max-width: 1195px) {
   .team__content__block__items,
   .team__content__block__itemsActors {
@@ -46,12 +54,24 @@
     .team__content__block__itemsActors__section {
       gap: 150px; } }
 @media only screen and (max-width: 768px) {
-  .team__content__block__items,
-  .team__content__block__itemsActors {
-    width: 768px; }
-    .team__content__block__items__section,
-    .team__content__block__itemsActors__section {
-      gap: 150px; }
+  .team__content__block__about {
+    font-size: 24px; }
+
+  .team__content__block__items__section,
+  .team__content__block__itemsActors__section {
+    gap: 80px;
+    flex-direction: column; }
+
+  .header__menu-bar-menu {
+    display: none; } }
+@media only screen and (max-width: 550px) {
+  .team__content__block__about {
+    font-size: 18px; }
+
+  .team__content__block__items__section,
+  .team__content__block__itemsActors__section {
+    gap: 80px;
+    flex-direction: column; }
 
   .header__menu-bar-menu {
     display: none; } }
