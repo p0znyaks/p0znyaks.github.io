@@ -222,7 +222,10 @@
     flex-direction: row;
     align-items: baseline;
     flex-wrap: nowrap;
-    justify-content: center; } }
+    justify-content: center; }
+
+  .form {
+    left: 10%; } }
 @media screen and (max-width: 490px) {
   .panorama {
     margin-left: 15px; }
